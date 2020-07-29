@@ -59,14 +59,6 @@
                 android:text="Details"
                 android:onClick="showDetails"/>
 
-            <Button
-                android:id="@+id/btn_invite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="invite"
-                android:onClick="inviteFriend"/>
-
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

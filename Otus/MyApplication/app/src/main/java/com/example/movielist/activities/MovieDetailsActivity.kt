@@ -1,7 +1,11 @@
 package com.example.movielist.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.*
 import androidx.databinding.DataBindingUtil
 import com.example.movielist.R
 import com.example.movielist.databinding.ActivityMovieDetailsBinding
@@ -9,14 +13,48 @@ import kotlinx.android.synthetic.main.activity_movie_details.*
 
 class MovieDetailsActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMovieDetailsBinding
+    companion object{
+        const val TAG_1: String = "COMMENT_CHECK_BOX"
+        const val TAG_2: String = "COMMENT_TEXT"
+    }
+
+    lateinit var checkBox: CheckBox
+    lateinit var textForCheckBox: TextView
+    lateinit var textComment: EditText
+    lateinit var commitButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_movie_details)
+        setContentView(R.layout.activity_movie_details)
 
         image_movie_details.setImageResource((intent.getStringExtra("MovieImage")).toInt())
         movie_name_details.text = intent.getStringExtra("MovieName")
         movie_description_details.text = intent.getStringExtra("MovieFullDescription")
+
+        doCheckBox()
+        commit()
+    }
+
+    private fun doCheckBox()  {
+        checkBox = findViewById(R.id.check_box)
+        textForCheckBox = findViewById(R.id.text_for_check_box)
+        textComment = findViewById(R.id.text_comment)
+        checkBox.setOnClickListener{
+            if(checkBox.isChecked) {
+                textForCheckBox.setVisibility(View.INVISIBLE)
+                textComment.setVisibility(View.VISIBLE)
+                Log.i(TAG_1, checkBox.isChecked.toString())
+            }else{
+                textForCheckBox.setVisibility(View.VISIBLE)
+            }}
+    }
+
+    private fun commit() {
+        commitButton = findViewById(R.id.commit_and_back_button)
+        commitButton.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            Log.i(TAG_2, textComment.text.toString())
+            startActivity(intent)
+        }
     }
 }
