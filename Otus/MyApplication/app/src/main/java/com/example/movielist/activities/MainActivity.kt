@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         recycler_view.setHasFixedSize(true)
         recycler_view.addItemDecoration(topSpaceItemDecoration)
 
-
+        inviteFriend()
 
         val itemTouchHelperCallBack = object : ItemTouchHelper.SimpleCallback(
             0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
