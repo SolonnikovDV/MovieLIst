@@ -53,6 +53,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         commitButton = findViewById(R.id.commit_and_back_button)
         commitButton.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
+            Toast.makeText(this, "You comment ''${textComment.text.toString()}'' was commited", Toast.LENGTH_LONG).show()
             Log.i(TAG_2, textComment.text.toString())
             startActivity(intent)
         }
