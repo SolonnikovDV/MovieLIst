@@ -215,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596467909869</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="реализация на RecycleView">
+      <created>1596468183585</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596468183585</updated>
+    </task>
+    <task id="LOCAL-00008" summary="реализация на RecycleView">
+      <created>1596468196676</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596468196676</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -259,10 +273,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1595865899471" />
-    <state x="259" y="52" key="CommitChangelistDialog2" timestamp="1596468183335">
+    <state x="259" y="52" key="CommitChangelistDialog2" timestamp="1596468196420">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="259" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596468183335" />
+    <state x="259" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596468196420" />
     <state x="560" y="370" key="Github.Dialog.Accounts.Choose" timestamp="1595864862267">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -311,10 +325,10 @@
       <screen x="45" y="23" width="1395" height="877" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/45.23.1395.877@45.23.1395.877" timestamp="1596463110171" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1596467913978">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1596468201550">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596467913978" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596468201550" />
     <state x="482" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1596468170558">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -355,9 +369,9 @@
     <state width="300" height="36" key="javadoc.popup.new/45.23.1395.877@45.23.1395.877" timestamp="1596035773780" />
     <state width="300" height="36" key="javadoc.popup.new/47.23.1393.877@47.23.1393.877" timestamp="1595887169833" />
     <state width="300" height="36" key="javadoc.popup.new/48.23.1392.877@48.23.1392.877" timestamp="1595870748301" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1596107957426">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1596469059708">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596107957426" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596469059708" />
   </component>
 </project>
