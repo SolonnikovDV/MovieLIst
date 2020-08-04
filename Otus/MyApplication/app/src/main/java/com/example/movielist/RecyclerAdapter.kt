@@ -3,6 +3,8 @@ package com.example.movielist
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -26,6 +28,8 @@ class RecyclerAdapter(
 
     override fun getItemCount() = itemList.size
 
+
+
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 //        val currentItem = itemList[position]
 //        holder.imageView.setImageResource(currentItem.movieImage)
@@ -33,6 +37,7 @@ class RecyclerAdapter(
 //        holder.textDescriptionView.text = currentItem.movieDescription
 
         holder.initialize(itemList.get(position), clickListener)
+
     }
 
     fun removeItem(viewHolder: RecyclerView.ViewHolder) {
@@ -50,6 +55,8 @@ class RecyclerAdapter(
         }.show()
     }
 
+
+
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.movie_image)
         val textNameView: TextView = itemView.findViewById(R.id.movie_name)
@@ -60,7 +67,13 @@ class RecyclerAdapter(
             textNameView.text = item.movieName
             textDescriptionView.text = item.movieDescription
 
-            itemView.setOnClickListener { action.onItemClick(item, adapterPosition) }
+            itemView.setOnClickListener {
+                action.onItemClick(item, adapterPosition)
+                //TODO добавить интерфейс на обработку клика кнопки
+//                action.onFavoriteButtonClick(item, adapterPosition)
+                }
+
+
         }
     }
 

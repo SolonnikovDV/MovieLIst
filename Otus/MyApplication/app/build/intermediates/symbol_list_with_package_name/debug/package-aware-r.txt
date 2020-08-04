@@ -1347,6 +1347,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_baseline_adb_24
 drawable ic_baseline_contact_mail_24
+drawable ic_baseline_favorite
+drawable ic_baseline_favorite_border
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_delete
@@ -1464,7 +1466,7 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btn_details
+id btn_favorite
 id buttonPanel
 id buttons_panel
 id cancel_button

@@ -59,12 +59,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/movie_image">
 
-            <Button
-                android:id="@+id/btn_details"
+            <ImageButton
+                android:id="@+id/btn_favorite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Details"
-                android:onClick="showDetails"/>
+                android:src="@drawable/ic_baseline_favorite_border"/>
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

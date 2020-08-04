@@ -36,10 +36,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
         deleteIcon = ContextCompat.getDrawable(this, R.drawable.ic_delete)!!
 
+        // TODO перенести инициализаицю ресайклера в отдельный метод
         recycler_view.adapter = adapter
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
         recycler_view.addItemDecoration(topSpaceItemDecoration)
+
+        //TODO addOnScrollListener
+        // добавить пагинацию с анимацией подгрузки
 
         inviteFriend()
 
