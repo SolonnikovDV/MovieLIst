@@ -42,7 +42,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
-            android:text="Movie description"
+            android:text="@string/movie_description"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -56,7 +56,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/movie_description_details"
             android:textSize="15sp"
-            android:text="Checked to leave your comments"
+            android:text="@string/checked_to_leave_your_comments"
             />
 
         <LinearLayout
@@ -85,7 +85,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textSize="15sp"
-                android:hint="Enter you comment"
+                android:hint="@string/enter_your_comment"
                 android:visibility="invisible"/>
         </LinearLayout>
 
@@ -95,9 +95,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/comment_zone"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Commit"
-            android:onClick="commit"
-            />
+            android:text="@string/commit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

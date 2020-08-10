@@ -1352,7 +1352,9 @@ drawable ic_baseline_favorite_border
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_delete
+drawable ic_delete_favotite
 drawable ic_edit_black_24dp
+drawable ic_inset_button
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1468,7 +1470,6 @@ id blocking
 id bottom
 id btn_favorite
 id buttonPanel
-id buttons_panel
 id cancel_button
 id center
 id center_horizontal
@@ -1515,8 +1516,10 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
+id favorite_movie_image
+id favorite_movie_name
+id favorite_recycler_view
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1541,6 +1544,7 @@ id image_movie_details
 id info
 id invisible
 id italic
+id item_favorite_movie_line
 id item_line
 id item_touch_helper_previous_elevation
 id labeled
@@ -1608,6 +1612,7 @@ id password_toggle
 id peekHeight
 id percent
 id pin
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1767,6 +1772,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_favorite_movie
 layout activity_main
 layout activity_movie_details
 layout custom_dialog
@@ -1785,7 +1791,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout item
+layout item_favorite_movie
+layout item_movie
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -1872,14 +1879,19 @@ string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string checked_to_leave_your_comments
 string chip_text
 string clear_text_end_icon_content_description
+string commit
+string enter_your_comment
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string movie_description
+string movie_name
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -1920,7 +1932,9 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
+string short_description
 string status_bar_notification_info_overflow
+string swipe_to_delete
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

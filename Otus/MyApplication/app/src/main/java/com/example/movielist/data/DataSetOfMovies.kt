@@ -1,9 +1,10 @@
-package com.example.movielist
+package com.example.movielist.data
 
-import android.widget.Button
-import androidx.annotation.MainThread
+import com.example.movielist.R
+import com.example.movielist.pojo.MovieItem
 
-class Storage {
+
+class DataSetOfMovies {
 
     fun createList(): ArrayList<MovieItem>{
         val list = ArrayList<MovieItem>()
@@ -13,7 +14,8 @@ class Storage {
                 "Black Widow",
                 "This movie about Black Widow",
                 "This is a super full description of the movie Black Widow, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         list.add(
             MovieItem(
@@ -21,7 +23,8 @@ class Storage {
                 "Blade Runner",
                 "This movie about Blade Runner",
                 "This is a super full description of the movie Blade Runner, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         list.add(
             MovieItem(
@@ -29,7 +32,8 @@ class Storage {
                 "Iron Giant",
                 "This movie about Iron Giant",
                 "This is a super full description of the movie Iron Giant, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         list.add(
             MovieItem(
@@ -37,7 +41,8 @@ class Storage {
                 "It",
                 "This movie about It",
                 "This is a super full description of the movie It, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         list.add(
             MovieItem(
@@ -45,7 +50,8 @@ class Storage {
                 "John Wick",
                 "This movie about John Wick",
                 "This is a super full description of the movie John Wick, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         list.add(
             MovieItem(
@@ -53,7 +59,8 @@ class Storage {
                 "Kong",
                 "This movie about Kong",
                 "This is a super full description of the movie Kong, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         list.add(
             MovieItem(
@@ -61,7 +68,8 @@ class Storage {
                 "I Robots",
                 "This movie about I Robots",
                 "This is a super full description of the movie I Robots, and there is nothing else to say about it dude."
-            ))
+            )
+        )
 
         return list
     }

@@ -58,4 +58,5 @@ class MovieDetailsActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

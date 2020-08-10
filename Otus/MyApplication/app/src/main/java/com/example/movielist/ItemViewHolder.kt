@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movielist.interfaces.OnItemClickListener
+import com.example.movielist.pojo.MovieItem
 
 class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val imageView: ImageView = itemView.findViewById(R.id.movie_image)
@@ -17,5 +18,8 @@ class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         textDescriptionView.text = item.movieDescription
 
         itemView.setOnClickListener { action.onItemClick(item, adapterPosition) }
+        itemView.setOnClickListener {
+            action.onItemClick(item, adapterPosition)
+        }
     }
 }
