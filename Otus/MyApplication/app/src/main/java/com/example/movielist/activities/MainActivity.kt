@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         return true
     }
 
+    // toolbar actions
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         var itemView = item.itemId
 

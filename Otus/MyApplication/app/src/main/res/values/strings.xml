@@ -7,5 +7,8 @@
     <string name="checked_to_leave_your_comments">Checked to leave your comments</string>
     <string name="enter_your_comment">Enter your comment</string>
     <string name="commit">Commit</string>
+    <string name="insert">Insert</string>
+    <string name="invite">Invite</string>
+    <string name="go_to_favorite">Go to favorite</string>
 
 </resources>

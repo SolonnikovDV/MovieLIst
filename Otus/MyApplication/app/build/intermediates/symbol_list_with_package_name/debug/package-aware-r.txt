@@ -1894,8 +1894,11 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string go_to_favorite
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string insert
+string invite
 string movie_description
 string movie_name
 string mtrl_badge_numberless_content_description

@@ -8,4 +8,7 @@
     <string name="checked_to_leave_your_comments">Поставьте галочу, чтобы оставить комментарий</string>
     <string name="enter_your_comment">Введите свой комментарий</string>
     <string name="commit">Отправить комментарий</string>
+    <string name="insert">Вставить</string>
+    <string name="invite">Пригласить</string>
+    <string name="go_to_favorite">Перейти в избранное</string>
 </resources>

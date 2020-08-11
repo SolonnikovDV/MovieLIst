@@ -38,7 +38,7 @@ class FavoriteMovieActivity : AppCompatActivity(), OnItemClickListener {
         list = ArrayList(_list)
 
         Log.i("_FAVORITE", list.toString())
-        //TODO on recycler
+
         recyclerInit()
 
     }
