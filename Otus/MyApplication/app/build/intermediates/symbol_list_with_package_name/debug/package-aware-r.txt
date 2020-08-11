@@ -1349,6 +1349,7 @@ drawable ic_baseline_adb_24
 drawable ic_baseline_contact_mail_24
 drawable ic_baseline_favorite
 drawable ic_baseline_favorite_border
+drawable ic_baseline_menu
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_delete
@@ -1542,7 +1543,9 @@ id ifRoom
 id image
 id image_movie_details
 id info
+id insert_item
 id invisible
+id invite_friend
 id italic
 id item_favorite_movie_line
 id item_line
@@ -1646,6 +1649,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id show_favorite
 id skipCollapsed
 id slide
 id smallLabel
@@ -1694,6 +1698,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -1843,6 +1848,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu main_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

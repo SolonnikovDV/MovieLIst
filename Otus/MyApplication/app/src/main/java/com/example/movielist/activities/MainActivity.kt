@@ -9,6 +9,8 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -40,6 +42,24 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         recyclerInit()
         swipeToDelete(adapter, findViewById(R.id.recycler_view))
 
+        setSupportActionBar(findViewById(R.id.toolbar))
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var itemView = item.itemId
+
+        when (itemView) {
+            R.id.insert_item -> insertItem()
+            R.id.invite_friend -> inviteFriend()
+            R.id.show_favorite -> showFavoriteList()
+        }
+        return false
     }
 
     // initialize of recycler
@@ -62,7 +82,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         // endregion
     }
 
-    fun swipeToDelete(adapter: RecyclerAdapter, recyclerView: RecyclerView) {
+    private fun swipeToDelete(adapter: RecyclerAdapter, recyclerView: RecyclerView) {
         val itemTouchHelperCallBack = object : ItemTouchHelper.SimpleCallback(
             0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
         ) {
@@ -156,7 +176,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     // inset item_movie in recycler
-    fun insertItem(view: View) {
+    fun insertItem() {
         val index: Int = list.size
         val indexPosition = index + 1
         val newItem = MovieItem(
@@ -167,6 +187,12 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         )
         list.add(index, newItem)
         adapter.notifyItemInserted(index)
+
+        Toast.makeText(
+            this,
+            "New item was added at $indexPosition position",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     // show details of movie
@@ -184,11 +210,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onFavoriteClick(item: MovieItem, position: Int) {
         // checking ArrayList
 
-        if ((favoriteList.isNotEmpty() && checkForeach(
-                favoriteList,
-                item
-            ) == true) || favoriteList.isEmpty()
-        ) {
+        if ((favoriteList.isNotEmpty() && checkForeach(favoriteList, item) == true) || favoriteList.isEmpty()) {
             favoriteList.add(item)
             Toast.makeText(
                 this,
@@ -196,9 +218,9 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 Toast.LENGTH_SHORT
             ).show()
 
-            val intent = Intent(this, FavoriteMovieActivity::class.java)
-            intent.putExtra("FavoriteMovie", favoriteList)
-            startActivity(intent)
+//            val intent = Intent(this, FavoriteMovieActivity::class.java)
+//            intent.putExtra("FavoriteMovie", favoriteList)
+//            startActivity(intent)
 
         } else {
             Toast.makeText(
@@ -209,6 +231,12 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         }
 
         Log.i("_LIST", favoriteList.toString())
+    }
+
+    fun showFavoriteList(){
+        val intent = Intent(this, FavoriteMovieActivity::class.java)
+        intent.putExtra("FavoriteMovie", favoriteList)
+        startActivity(intent)
     }
 
     // duplicate check
@@ -222,7 +250,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     // send action
-    fun inviteFriend(view: View) {
+    fun inviteFriend() {
         val intent = Intent(Intent.ACTION_SEND)
         intent.data = Uri.parse("send to: ")
         intent.type = "plane/text"
