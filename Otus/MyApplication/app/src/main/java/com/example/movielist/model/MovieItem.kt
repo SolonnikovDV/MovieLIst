@@ -1,4 +1,4 @@
-package com.example.movielist.pojo
+package com.example.movielist.model
 
 import android.os.Parcel
 import android.os.Parcelable

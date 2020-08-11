@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movielist.pojo.MovieItem
+import com.example.movielist.model.MovieItem
 import com.example.movielist.R
 import com.example.movielist.interfaces.OnItemClickListener
 import kotlinx.android.synthetic.main.item_movie.view.*

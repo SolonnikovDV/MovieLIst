@@ -1,7 +1,7 @@
 package com.example.movielist.data
 
 import com.example.movielist.R
-import com.example.movielist.pojo.MovieItem
+import com.example.movielist.model.MovieItem
 
 
 class DataSetOfMovies {

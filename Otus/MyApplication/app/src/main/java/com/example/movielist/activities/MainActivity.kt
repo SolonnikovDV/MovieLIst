@@ -22,7 +22,7 @@ import com.example.movielist.adapters.RecyclerAdapter
 import com.example.movielist.data.DataSetOfMovies
 import com.example.movielist.decorations.TopSpaceItemDecoration
 import com.example.movielist.interfaces.OnItemClickListener
-import com.example.movielist.pojo.MovieItem
+import com.example.movielist.model.MovieItem
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 

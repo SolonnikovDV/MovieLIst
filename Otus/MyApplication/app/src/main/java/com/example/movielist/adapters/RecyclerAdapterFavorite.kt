@@ -3,7 +3,7 @@ package com.example.movielist.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movielist.pojo.MovieItem
+import com.example.movielist.model.MovieItem
 import com.example.movielist.R
 import com.example.movielist.holders.ItemFavorieHolder
 import com.example.movielist.interfaces.OnItemClickListener

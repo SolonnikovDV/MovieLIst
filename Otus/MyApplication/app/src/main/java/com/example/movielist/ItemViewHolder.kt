@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movielist.interfaces.OnItemClickListener
-import com.example.movielist.pojo.MovieItem
+import com.example.movielist.model.MovieItem
 
 class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val imageView: ImageView = itemView.findViewById(R.id.movie_image)

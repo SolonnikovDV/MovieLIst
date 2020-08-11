@@ -17,7 +17,7 @@ import com.example.movielist.R
 import com.example.movielist.adapters.RecyclerAdapterFavorite
 import com.example.movielist.decorations.TopSpaceItemDecoration
 import com.example.movielist.interfaces.OnItemClickListener
-import com.example.movielist.pojo.MovieItem
+import com.example.movielist.model.MovieItem
 
 
 class FavoriteMovieActivity : AppCompatActivity(), OnItemClickListener {
