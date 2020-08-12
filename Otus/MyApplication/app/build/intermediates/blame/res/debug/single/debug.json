@@ -4,20 +4,20 @@
         "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/drawable/ic_baseline_menu.xml"
     },
     {
-        "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/drawable-v24_kong.jpg.flat",
-        "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/drawable-v24/kong.jpg"
-    },
-    {
         "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/drawable_ic_delete.xml.flat",
         "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/drawable/ic_delete.xml"
     },
     {
-        "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/drawable-v24_kong.jpg.flat",
+        "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/drawable-v24/kong.jpg"
     },
     {
         "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/drawable-v24_irongiant.jpg.flat",
         "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/drawable-v24/irongiant.jpg"
+    },
+    {
+        "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/dmitrysolonnikov/AndroidStudioProjects/Otus/MyApplication/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",

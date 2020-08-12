@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.databinding.DataBindingUtil
 import com.example.movielist.R
-import com.example.movielist.databinding.ActivityMovieDetailsBinding
 import kotlinx.android.synthetic.main.activity_movie_details.*
 
 class MovieDetailsActivity : AppCompatActivity() {
