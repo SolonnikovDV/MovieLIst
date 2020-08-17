@@ -39,7 +39,7 @@
         android:background="@color/colorPrimary"
         android:navigationIcon="@drawable/ic_baseline_menu"
         android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
-        android:title="Menu"
+        android:title="@string/menu"
         android:subtitle="Movie list"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2020,6 +2020,7 @@ string invite
 string item_view_role_description
 string material_slider_range_end
 string material_slider_range_start
+string menu
 string movie_description
 string movie_name
 string mtrl_badge_numberless_content_description

@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/movie_name"
+            android:textSize="18dp"
             app:layout_constraintStart_toEndOf="@id/movie_image"
             app:layout_constraintTop_toTopOf="@id/movie_image" />
 
@@ -37,30 +38,31 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/short_description"
+            android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@id/movie_image"
             app:layout_constraintTop_toBottomOf="@id/movie_name" />
 
-        <TextView
+        <ImageButton
+            android:id="@+id/btn_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="12sp"
-            android:text="@string/swipe_to_delete"
-            app:layout_constraintTop_toBottomOf="@id/movie_description"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:src="@drawable/ic_baseline_favorite_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/movie_image">
 
-            <ImageButton
-                android:id="@+id/btn_favorite"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_favorite_border"/>
+                android:layout_marginStart="8dp"
+                android:text="@string/swipe_to_delete"
+                android:textSize="12sp" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

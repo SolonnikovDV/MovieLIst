@@ -26,14 +26,7 @@ class RecyclerAdapter(
 
     override fun getItemCount() = itemList.size
 
-
-
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-//        val currentItem = itemList[position]
-//        holder.imageView.setImageResource(currentItem.movieImage)
-//        holder.textNameView.text = currentItem.movieName
-//        holder.textDescriptionView.text = currentItem.movieDescription
-
         holder.initialize(itemList.get(position), listener)
     }
 
@@ -52,25 +45,4 @@ class RecyclerAdapter(
             notifyItemInserted(removePosition)
         }.show()
     }
-
-
-
-//    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        val imageView: ImageView = itemView.findViewById(R.id.movie_image)
-//        val textNameView: TextView = itemView.findViewById(R.id.movie_name)
-//        val textDescriptionView: TextView = itemView.findViewById(R.id.movie_description)
-//
-//        fun initialize(item: MovieItem, itemClickListener: OnItemClickListener) {
-//            imageView.setImageResource(item.movieImage)
-//            textNameView.text = item.movieName
-//            textDescriptionView.text = item.movieDescription
-//
-//            itemView.setOnClickListener {
-//                itemClickListener.onItemClick(item, adapterPosition)
-//                }
-//            itemView.findViewById<View>(R.id.btn_favorite).setOnClickListener {
-//                itemClickListener.onFavoriteClick(item, adapterPosition)
-//            }
-//        }
-//    }
 }

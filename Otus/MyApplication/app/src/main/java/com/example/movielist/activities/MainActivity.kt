@@ -26,12 +26,12 @@ import com.example.movielist.model.MovieItem
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
-    val list = DataSetOfMovies().createList()
+    private val list = DataSetOfMovies().createList()
     private val adapter = RecyclerAdapter(list, this)
     private val topSpaceItemDecoration = TopSpaceItemDecoration(30)
     private var swipeBackground: ColorDrawable = ColorDrawable(Color.parseColor("#FF0000"))
     private lateinit var deleteIcon: Drawable
-    val favoriteList = ArrayList<MovieItem>()
+    private val favoriteList = ArrayList<MovieItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -177,7 +177,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     // inset item_movie in recycler
-    fun insertItem() {
+    private fun insertItem() {
         val index: Int = list.size
         val indexPosition = index + 1
         val newItem = MovieItem(
@@ -210,7 +210,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     // add item_movie in the favorite list + checking ArrayList for null & duplicate
     override fun onFavoriteClick(item: MovieItem, position: Int) {
         // checking ArrayList
-
         if ((favoriteList.isNotEmpty() && checkForeach(favoriteList, item) == true) || favoriteList.isEmpty()) {
             favoriteList.add(item)
             Toast.makeText(
@@ -218,10 +217,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 "Movie ''${item.movieName}'' is added in favorite list",
                 Toast.LENGTH_SHORT
             ).show()
-
-//            val intent = Intent(this, FavoriteMovieActivity::class.java)
-//            intent.putExtra("FavoriteMovie", favoriteList)
-//            startActivity(intent)
 
         } else {
             Toast.makeText(

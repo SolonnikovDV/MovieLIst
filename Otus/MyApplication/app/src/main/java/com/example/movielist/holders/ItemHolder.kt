@@ -10,9 +10,9 @@ import com.example.movielist.interfaces.OnItemClickListener
 import kotlinx.android.synthetic.main.item_movie.view.*
 
 class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val imageView: ImageView = itemView.findViewById(R.id.movie_image)
-    val textNameView: TextView = itemView.findViewById(R.id.movie_name)
-    val textDescriptionView: TextView = itemView.findViewById(R.id.movie_description)
+    private val imageView: ImageView = itemView.findViewById(R.id.movie_image)
+    private val textNameView: TextView = itemView.findViewById(R.id.movie_name)
+    private val textDescriptionView: TextView = itemView.findViewById(R.id.movie_description)
 
     fun initialize(item: MovieItem, itemClickListener: OnItemClickListener) {
         imageView.setImageResource(item.movieImage)
