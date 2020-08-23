@@ -5,9 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movielistonfragments.R
-import com.example.movielistonfragments.interfaces.OnItemClickListener
 import com.example.movielistonfragments.model.MovieItem
-import kotlinx.android.synthetic.main.item_movie.view.*
 
 class ItemHolderFavorite(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

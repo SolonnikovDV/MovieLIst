@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movielistonfragments.R
-import com.example.movielistonfragments.holders.ItemHolder
 import com.example.movielistonfragments.holders.ItemHolderFavorite
 import com.example.movielistonfragments.model.MovieItem
 import com.google.android.material.snackbar.Snackbar
@@ -28,7 +27,7 @@ class FavoriteListAdapter(
         holder.bind(itemList[position])
     }
 
-    // remove item_movie, using in swipe to delete method
+    // remove favorite item from list, using in swipe to delete method
     fun removeItem(viewHolder: RecyclerView.ViewHolder) {
         // cash
         removePosition = viewHolder.adapterPosition

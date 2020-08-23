@@ -3,14 +3,9 @@ package com.example.movielistonfragments.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.WindowManager
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -28,7 +23,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
         // start MovieListFragment
         openFragment(R.id.fragment_container, ListFragment(), ListFragment.TAG)
@@ -44,7 +38,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         bottomNavigation.setOnNavigationItemSelectedListener {item ->
             when(item.itemId){
                 R.id.home->openFragment(R.id.fragment_container, ListFragment(), ListFragment.TAG)
-                // сюда передать FavoriteFragment().newInstance
                 R.id.favorite->openFragment(R.id.fragment_container, FavoriteFragment().newInstance(favoriteList), FavoriteFragment.TAG)
             }
             true
@@ -88,7 +81,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         openFragment(R.id.fragment_container, DetailsFragment().newInstance(item), DetailsFragment.TAG)
     }
 
-    //empty method
+    // add favorite items in a list
     override fun onFavoriteClick(item: MovieItem, position: Int) {
         // FavoriteFragment will start in BottomNavigationBar
         addToFavorite(item)
@@ -114,6 +107,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         }
         return true
     }
+
     // invite friend action in toolbar menu
     private fun inviteFriend() {
         val intent = Intent(Intent.ACTION_SEND)

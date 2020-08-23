@@ -24,10 +24,6 @@ class FavoriteFragment : Fragment() {
     private var swipeBackground: ColorDrawable = ColorDrawable(Color.parseColor("#FF0000"))
     private lateinit var deleteIcon : Drawable
 
-
-//    test
-//    private val list = DataSetOfMovies().createList()
-
     companion object{
         const val TAG = "FavoriteFragment"
         const val MOVIE_NAME = "MOVIE_NAME"
@@ -148,7 +144,6 @@ class FavoriteFragment : Fragment() {
                 )
             }
         }
-        // endregion
 
         val itemTouchHelper = ItemTouchHelper(itemTouchHelperCallBack)
         itemTouchHelper.attachToRecyclerView(recyclerView)

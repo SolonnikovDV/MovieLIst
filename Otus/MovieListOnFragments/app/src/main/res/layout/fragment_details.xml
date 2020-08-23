@@ -15,8 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:contentScrim="@color/design_default_color_background"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Details">
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
                 android:id="@+id/image_movie_details"
