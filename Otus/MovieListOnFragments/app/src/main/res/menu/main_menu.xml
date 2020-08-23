@@ -2,19 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/insert_item"
-        android:title="@string/insert"
-        android:icon="@drawable/ic_inset_button"
-        app:showAsAction="ifRoom"/>
-
     <item android:id="@+id/invite_friend"
         android:title="@string/invite"
-        android:icon="@drawable/ic_baseline_contact_mail_24"
-        app:showAsAction="ifRoom"/>
-
-    <item android:id="@+id/show_favorite"
-        android:title="@string/go_to_favorite"
-        android:icon="@drawable/ic_baseline_favorite"
+        android:icon="@drawable/ic_baseline_invite_friend"
         app:showAsAction="ifRoom"/>
 
 </menu>
