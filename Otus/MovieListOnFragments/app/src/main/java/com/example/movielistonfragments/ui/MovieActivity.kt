@@ -39,7 +39,6 @@ class MovieActivity : AppCompatActivity(), OnItemClickListener {
 
         //start bottom navigation bar
         bottomNavigationInit()
-//        bottom_navigation_bar.setupWithNavController(movie_nav_host_fragment.findNavController())
 
         //start top tool bar
         setSupportActionBar(findViewById(R.id.toolbar))
