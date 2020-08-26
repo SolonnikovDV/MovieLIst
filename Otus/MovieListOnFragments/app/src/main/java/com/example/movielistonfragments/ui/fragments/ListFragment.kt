@@ -1,4 +1,4 @@
-package com.example.movielistonfragments.fragments
+package com.example.movielistonfragments.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movielistonfragments.R
+import com.example.movielistonfragments.R.color.material_on_surface_stroke
 import com.example.movielistonfragments.adapters.ListAdapter
 import com.example.movielistonfragments.data.DataSetOfMovies
 import com.example.movielistonfragments.decorations.TopSpaceItemDecoration

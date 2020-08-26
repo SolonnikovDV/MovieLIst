@@ -1,4 +1,4 @@
-package com.example.movielistonfragments.activities
+package com.example.movielistonfragments.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -9,40 +9,56 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.movielistonfragments.R
-import com.example.movielistonfragments.fragments.DetailsFragment
-import com.example.movielistonfragments.fragments.FavoriteFragment
-import com.example.movielistonfragments.fragments.ListFragment
 import com.example.movielistonfragments.interfaces.OnItemClickListener
 import com.example.movielistonfragments.model.MovieItem
+import com.example.movielistonfragments.ui.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_movie.*
 
 
-class MainActivity : AppCompatActivity(), OnItemClickListener {
+class MovieActivity : AppCompatActivity(), OnItemClickListener {
     private val favoriteList = ArrayList<MovieItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        // start MovieListFragment
-        openFragment(R.id.fragment_container, ListFragment(), ListFragment.TAG)
+        setContentView(R.layout.activity_movie)
+
+        //start splash screen
+        openFragment(R.id.fragment_container, SplashScreenFragment(), SplashScreenFragment.TAG)
+
+        //set delay for ListFragment start
+        object: Thread(){
+            override fun run() {
+                sleep(4500)
+                openFragment(R.id.fragment_container, ListFragment(), ListFragment.TAG)
+            }
+        }.start()
+
         //start bottom navigation bar
         bottomNavigationInit()
+//        bottom_navigation_bar.setupWithNavController(movie_nav_host_fragment.findNavController())
+
         //start top tool bar
         setSupportActionBar(findViewById(R.id.toolbar))
     }
 
+    //TODO refactor this method and change it on NavGraph
     private fun bottomNavigationInit(){
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation_bar)
 
         bottomNavigation.setOnNavigationItemSelectedListener {item ->
             when(item.itemId){
-                R.id.home->openFragment(R.id.fragment_container, ListFragment(), ListFragment.TAG)
-                R.id.favorite->openFragment(R.id.fragment_container, FavoriteFragment().newInstance(favoriteList), FavoriteFragment.TAG)
+                R.id.listFragment->openFragment(R.id.fragment_container, ListFragment(), ListFragment.TAG)
+                R.id.favoriteFragment->openFragment(R.id.fragment_container, FavoriteFragment().newInstance(favoriteList), FavoriteFragment.TAG)
+                R.id.searchFragment->openFragment(R.id.fragment_container, SearchFragment(), SearchFragment.TAG)
             }
             true
         }
     }
+
     // initialize toolbar menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
@@ -51,7 +67,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     // toolbar actions
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        var itemView = item.itemId
+        var itemView: Int = item.itemId
 
         when (itemView) {
             R.id.invite_friend -> inviteFriend()
@@ -68,8 +84,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     override fun onBackPressed() {
-        // set backStackEntryCount > 1, cause backStackEntryCount = 1 -> MainActivity (empty layout)
-        if (supportFragmentManager.backStackEntryCount > 1) {
+        // set backStackEntryCount > 1, cause backStackEntryCount = 2 -> SplashScreenFragment
+        if (supportFragmentManager.backStackEntryCount > 2) {
             supportFragmentManager.popBackStack()
         } else {
             Toast.makeText(this, "BackStack is empty", Toast.LENGTH_SHORT).show()

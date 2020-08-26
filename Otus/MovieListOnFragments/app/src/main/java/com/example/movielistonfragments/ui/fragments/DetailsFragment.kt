@@ -1,4 +1,4 @@
-package com.example.movielistonfragments.fragments
+package com.example.movielistonfragments.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,7 +25,7 @@ class DetailsFragment : Fragment() {
 
     }
 
-    fun newInstance (item: MovieItem) : DetailsFragment{
+    fun newInstance (item: MovieItem) : DetailsFragment {
         val fragment = DetailsFragment()
         val bundle = Bundle()
 

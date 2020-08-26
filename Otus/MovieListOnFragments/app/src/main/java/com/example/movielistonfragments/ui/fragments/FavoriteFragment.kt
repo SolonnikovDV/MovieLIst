@@ -1,4 +1,4 @@
-package com.example.movielistonfragments.fragments
+package com.example.movielistonfragments.ui.fragments
 
 import android.graphics.Canvas
 import android.graphics.Color
@@ -39,6 +39,7 @@ class FavoriteFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        retainInstance = true
         return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 

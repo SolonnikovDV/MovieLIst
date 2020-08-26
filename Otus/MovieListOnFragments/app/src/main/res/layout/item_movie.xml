@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="4dp"
-    app:cardElevation="10dp">
+    app:cardElevation="10dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_line"
